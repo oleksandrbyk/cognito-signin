@@ -34,7 +34,7 @@ app.post('/signin', (req, res) => {
     onSuccess: function (result) {
       res.status(200).send({
         success: 'true',
-        message: 'todos retrieved successfully',
+        message: 'Successfully signed in',
         data: result,
       });
     },
