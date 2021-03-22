@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require('body-parser')
 app.use(bodyParser.json());
+require('dotenv').config()
 
 const AmazonCognitoIdentity = require('amazon-cognito-identity-js');
 const CognitoUserPool = AmazonCognitoIdentity.CognitoUserPool;
@@ -9,8 +10,8 @@ const CognitoUserPool = AmazonCognitoIdentity.CognitoUserPool;
 const AWS = require('aws-sdk');
 
 const poolData = {    
-  UserPoolId : "us-east-1_vygd5sGmE", // Your user pool id here    
-  ClientId : "6c6a4ltrfmvsi4tdlkumkn6d6p" // Your client id here
+  UserPoolId : process.env.COGNITO_USER_POOL_ID, // Your user pool id here    
+  ClientId : process.env.COGNITO_CLIENT_ID // Your client id here
 }; 
 const pool_region = 'us-east-1';
 
