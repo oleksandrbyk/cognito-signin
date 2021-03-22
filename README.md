@@ -6,7 +6,7 @@
 npm install
 ```
 
-2. Add `.env` file in the root dir of project.(Use .env-sample)
+2. Add `.env` file in the root dir of project.(Use `.env-sample`)
 
 ### Run server
 4. Run server
