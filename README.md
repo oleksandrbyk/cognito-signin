@@ -15,4 +15,12 @@ node app.js
 ```
 
 You can test the apis with postman or curl.
-
+- With curl,
+```
+curl --location --request POST 'localhost:3000/signin' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "email": "email",
+    "password": "password"
+}'
+```
